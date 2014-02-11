@@ -91,14 +91,14 @@ Full           Backup    11  18-Mar-12 23:10    BackupCatalog      *unknown*
                                      'priority': '10',
                                      'time': '23:05',
                                      'type': 'Backup',
-                                     'volume': '*unknown*'},
+                                     'volume': 'DISK_sem-0004'},
                                     {'date': '18-Mar-12',
                                      'level': 'Full',
                                      'name': 'BackupCatalog',
                                      'priority': '11',
                                      'time': '23:10',
                                      'type': 'Backup',
-                                     'volume': '*unknown*'}])
+                                     'volume': 'DISK_sem-0004'}])
 
     def test_send_command_by_polling(self):
         b = BConsole()
