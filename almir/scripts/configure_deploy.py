@@ -84,7 +84,10 @@ def validate_engine(v):
     print 'Connecting to catalog database to verify configuration ...'
     try:
         engine = None
-        engine = sqlalchemy.create_engine(v)
+        if not 'potsgres' in v:
+            engine = sqlalchemy.create_engine(v)
+        else:
+            engine = sqlalchemy.create_engine(v, client_encoding='utf-8')
         if 'client' not in map(lambda e: e.lower(), engine.table_names()):
             raise ValueError('Connection string has wrong parameters (could not connect to catalog database)')  # PRAGMA: no cover
     except:
