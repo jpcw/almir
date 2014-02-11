@@ -84,7 +84,7 @@ def validate_engine(v):
     print 'Connecting to catalog database to verify configuration ...'
     try:
         engine = None
-        if not 'potsgres' in v:
+        if not 'postgres' in v:
             engine = sqlalchemy.create_engine(v)
         else:
             engine = sqlalchemy.create_engine(v, client_encoding='utf-8')
