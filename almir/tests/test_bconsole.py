@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import time
 import unittest2
 from subprocess import Popen, PIPE
